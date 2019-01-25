@@ -1,1 +1,301 @@
+/**
+x  Create and use at least the following primitive data types (int, double, bool, char )
+o  Relational operators(==, !=, >, >=, <, <=) - use at least 3
+o  Logical operators ( &&, ||, !) - use at least 2
+o  Uniary operators (+, - , ++, -- ) – use at least 1
+o  One or more "if/else, if/else if/else or switch" statements
+o  One or more "while / do while/ for loop(s)"
+x  At least 5 functions one must contain at least 2 parameters (1 MUST have a default value), one method is: int main()
+x  Include parameters at least 1 pass by value and at least 1pass by reference
+x  Declare, initialize, iterate, and modify an array(s) or vector(s) contents.
+x  Arrays or Vectors must be and it MUST be traversed through AND accessed.
+x  Comments explaining logic and operation of program at "key points"
+x  Animation OR Graphical Interface (must be attempted)
+o  Meaningful variable names
+x  "Documentation" must be created for your project (each function should be commented according to Mayo specifications)
+o  Declare, initialize, dereference and use at least 1 Pointer.
 
+**/
+
+#include <iostream>
+#include <string>
+#include <stdlib.h>
+#include <windows.h>
+
+using namespace std;
+
+///Function Prototypes
+
+void warning();
+void instructions();
+void partOne(int *);
+void roomOne(int *);
+string characterName();
+int age(int *);
+
+///start
+int main()                                         ///Used to call functions
+{
+    int yourAge;
+    int *accessAge = &yourAge;
+
+    warning();
+    age(accessAge);
+    instructions();                                ///Displays instructions of how to play the game
+    partOne(accessAge);
+}
+void warning()
+{
+    cout << "WARNING!! THIS GAME IS LOUD!! TO PROTECT YOUR EARS LOWER THE VOLUME!!\n\n" << endl;
+    system("PAUSE");
+    system("CLS");
+}
+int age(int *accessAge)
+{
+    cout << "Please enter your age before starting the game.\n\n\n" << endl;
+    cin >> *accessAge;
+    cout << "\n\n" << endl;
+
+    if(*accessAge >= 13 && *accessAge <= 420)
+    {
+        if(*accessAge == 69 || *accessAge == 420)
+        {
+            cout << "Hilarious.\n\n" << endl;
+            system("PAUSE");
+            system("CLS");
+        }
+        else
+        {
+            system("PAUSE");
+            system("CLS");
+        }
+    }
+    if(*accessAge == 0)
+    {
+        cout << "I'm very concerned.\n\n" << endl;
+        system("PAUSE");
+        system("CLS");
+    }
+    else if(*accessAge < 13)
+    {
+        cout << "You can't play this game!" << endl;
+        exit(1);
+    }
+
+}
+void instructions()
+{
+
+
+    cin.get();
+
+    cout << " -------------------------------- Instructions --------------------------------\n\n" << endl;
+    cout << "\tWelcome to Gloom! ";
+    cout << "To select an option, if it gives a list\nof options to choose from, enter 1 for ";
+    cout << "the first option, two for\nthe second, and so on.";
+    cout << "If it gives no options, and is only a question,\ntype y for yes or n for no.\n\n" << endl;
+
+
+    cin.get();
+
+    cout << "\tIn order for the next dialogue to show, press enter to\ncontinue.";
+    cout << "(Also, the creator might get a lot of things wrong despite his\nhours of research)\n\n" << endl;
+
+    system("PAUSE");
+    system("CLS");
+}
+void partOne(int *accessAge)
+{
+    char response1 = 'Y';                                  ///First response to first question
+    char response2 = 'Y';
+
+    cout << endl;
+    cout << " ----------------------------------- Part 1 -----------------------------------\n\n" << endl;      ///Displays Part 1
+
+    system("PAUSE");
+
+    cout << "\n\n\t" << "It's cold. In attempt to warm yourself, you tightly wrap yourself\nin a thin, tattered blanket. ";
+    cout << "It seems to be getting colder by the minute.\nIn discomfort, you move around restlessly on the scratchy,";
+    cout << "sheetless\nmattress. ";
+    cout << "In the corner, a small, waxy object dimly illuminates the rather\ncramped room. ";
+    cout << "You stare at the figures created by the small candle as they\nstare into you. You force your eyes shut in fear. \n\n" << endl;
+
+    system("PAUSE");
+    cout << "\n" << endl;
+
+    cout << "\t'Theywanttohurtme. TheywANTTOHURTME, THEY-'  Your thoughts are\ninterrupted by a loud, deafening scream.\n\n" << endl;
+
+    system("PAUSE");
+    system("CLS");
+
+    Beep(4500, 1500);
+
+    cout << "\t'Who is that? Why are they here? Am I next!?' These thoughts play\non repeat. Over and over and over. They wont stop! ";
+    cout << "In your state of\nconfusion, you begin to weep. Your curiosity is peaking, you want to know\nwhat is going on. " ;
+    cout << "You know you want to do something, but you are terrified.\n\n" << endl;
+
+    cout << "\n";
+
+    retry:
+
+    cout << "\tGet up? (Y/N)\n\n" << endl;
+
+    cin >> response1;
+
+    cout << "\n" << endl;
+
+    switch(response1)
+    {
+        case 'Y' : case 'y' :
+        {
+            retry1:
+            cout << "\tIgnoring the demon-like figures that loom over you, although it\nis difficult, you manage to get out ";
+            cout << "of your bed. Wrapping yourself in the\ntattered blanket, you walk over to the red-orange flame. \n\n" << endl;
+            cout << "\tPick it up? (Y/N)\n\n" << endl;
+
+            cin >> response2;
+
+            cout << "\n\n" << endl;
+
+            switch(response2)
+            {
+                case 'Y' : case 'y' :
+                {
+                    cout << "\tYou pick up the brass chamber stick. The flame flickers. The\nshadows created by the ";
+                    cout << "flame shift as you make your way to the old,\nchipped door. ";
+                    cout << "As you do, you kick over multiple empty prescription\ndrug bottles and a copious amount of ";
+                    cout << "large, yet empty, hard drink\nbottles. The loud clacking sound startles you. ";
+                    cout << "You cautiously move your hand towards the doorknob. You jerk your hand back when ";
+                    cout << "it makes contact with the sharp coldness of the knob. You attempt to turn the knob again. ";
+                    cout << "The knob is slowly turned... \n\n" << endl;
+                    system("PAUSE");
+                    break;
+                }
+                case 'N' : case 'n' :
+                {
+                    cout << "";
+                    break;
+                }
+                default:
+                {
+                    cout << "Invalid Response." << endl;
+
+                    system("PAUSE");
+                    system("CLS");
+                    goto retry1;
+                    break;
+                }
+            }
+
+            roomOne(accessAge);
+            break;
+        }
+        case 'N' : case 'n' :
+        {
+            cout << "\tYou stiffen and remain immobile. You cannot move. Your body feels almost thousands of pounds\nheavier. ";
+            cout << "Unable to close your eyes, you are forced to watch the demon-like figures loom over\nyou. They seem to be laughing.";
+            cout << "You stay like this until you become drowsy, and then you fall\ninto a deep, coma-like slumber. " << endl;
+            break;
+        }
+        default:
+        {
+            cout << "Invalid Response:/" << endl;
+
+            system("PAUSE");
+            system("CLS");
+
+            goto retry;
+            break;
+        }
+    }
+}
+void roomOne(int *accessAge)
+{
+    string name;
+    char response3;
+    string whyTakeIt = "WHY DID YOU TAKE IT! ";
+    const int ONE_HUNDRED = 100;
+
+    system("CLS");
+    cout << "\tThe ancient door creaks open, almost as if it's in pain. Slowly, as if you were a snail,\nyou walk into a larger room. ";
+    cout << "The flickering flame barely does its job. The room seems to be almost\nas dark as it would be without a light source. ";
+    cout << "The candle gives off just enough light for you to\nmove safely through the endless amount of trashed bottles and cans. ";
+    cout << "You realize nothing is here\nexcept you and the smiling figures wavering on the walls. ";
+    cout << "You make your way over to the couch. Your\nbed may be scratchy, but compared to the couch, the bed is as soft as cotton. ";
+    cout << "You look down at the\nglass table and ";
+
+    name = characterName();                                      ///Gets the Character's name
+
+    cout << "\n\n\tThe card reads, " << endl;
+    cout << "\n\n\tName: " << name << endl;
+    cout << "\tAge: " << *accessAge << endl;
+    cout << "\n\n" << endl;
+
+    system("PAUSE");
+
+    retry3:
+
+    cout << "\n\n\tYou break your gaze from the card and turn your head toward the sleeping pills.\n\n" << endl;
+
+    cout << "\tTake some? (Y/N)\n\n" << endl;
+    cin >> response3;
+    cout << "\n" << endl;
+
+    switch(response3)
+    {
+        case 'Y' : case 'y' :
+        {
+            cout << "\tYou sluggishly grab the small bottle, pop of the top, and pour some pills into your palm. The\nrattling ";
+            cout << "sound almost soothes you.";
+            cout << "You put the bitter pills into your mouth, shakily tilt your\nhead back, swallow, and then...\n" << endl;
+
+            system("PAUSE");
+            system("CLS");
+
+            for(int i = 0; i <= ONE_HUNDRED; i++)
+            {
+                cout << whyTakeIt ;
+            }
+
+
+            cout << "\n\nThe End.\n" << endl;
+
+            Beep(5000, 3000);
+
+            exit(1);
+
+            break;
+        }
+        case 'N' : case 'n' :
+        {
+            cout << "You sluggishly reach your hand out towards the sleeping pills. But then you hurriedly " << endl;
+            cout << "yank it back. You ";
+            break;
+        }
+        default:
+        {
+            cout << "The Cookie Monster ate you because you entered an invalid response!\n" << endl;
+            system("PAUSE");
+            system("CLS");
+            goto retry3;
+            break;
+        }
+    }
+}
+string characterName()
+{
+    string name;
+    cin.get();
+
+    cout << "set the candle down. You see a card with your face on it, along with bottles of\nsleeping pills littered all over the table.\n\n" << endl;
+    cout << "\tWhat is your name? \n\n" << endl;
+
+    getline(cin, name);
+
+    return name;
+}
+void test(string name)
+{
+    cout << " \n Hello, " << name << endl;
+
+}
